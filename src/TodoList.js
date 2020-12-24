@@ -6,7 +6,7 @@ import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 // import ListItemText from "@material-ui/core/ListItemText";
 
-const TodoList = ({todos, removeTodo, toggleTodo }) =>{
+const TodoList = ({todos, removeTodo, toggleTodo, editTodo }) =>{
     return (
         <Paper>
             <List>
@@ -20,6 +20,7 @@ const TodoList = ({todos, removeTodo, toggleTodo }) =>{
                             completed={ todo.completed }
                             removeTodo={ removeTodo }
                             toggleTodo={ toggleTodo } 
+                            editTodo={ editTodo }
                         />
                     </ListItem>
                     <Divider/>

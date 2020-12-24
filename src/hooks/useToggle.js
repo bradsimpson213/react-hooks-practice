@@ -8,4 +8,4 @@ const useToggle = (initialVal) => {
     return [ state, toggle ]
 };
 
-export default toggle;
+export default useToggle;
