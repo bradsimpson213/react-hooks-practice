@@ -7,7 +7,8 @@ import ListItem from "@material-ui/core/ListItem";
 // import ListItemText from "@material-ui/core/ListItemText";
 
 const TodoList = ({todos, removeTodo, toggleTodo, editTodo }) =>{
-    return (
+    if (todos.length) {
+        return (
         <Paper>
             <List>
             {todos.map((todo,i)  =>(
@@ -26,7 +27,9 @@ const TodoList = ({todos, removeTodo, toggleTodo, editTodo }) =>{
             ))}
             </List>
         </Paper>
-    );
+        );
+    }
+    else return null;
 }
 
 export default TodoList;
