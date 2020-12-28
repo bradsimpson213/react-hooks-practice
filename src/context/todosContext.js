@@ -6,13 +6,16 @@ const defaultTodos = [
     { id: 2, task: "Wash Car", completed: true },
 ];
 
-export const TodosContext = createContext()
+export const TodosContext = createContext();
+export const DispatchContext = createContext();
 
 export const TodosProvider = (props) => {
     const [todos, dispatch] = useReducer(todoReducer, defaultTodos);
     return (
-        <TodosContext.Provider value={{ todos, dispatch }}>
-            { props.children }
+        <TodosContext.Provider value={{ todos }}>
+            <DispatchContext.Provider value={{ dispatch }}>
+                { props.children }
+            </DispatchContext.Provider>
         </TodosContext.Provider>
     )
 };
