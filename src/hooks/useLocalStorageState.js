@@ -5,8 +5,7 @@ const useLocalStorageState = (key, defaultVal) => {
         let val;
         try {
             val = JSON.parse(window.localStorage.getItem(key) || String(defaultVal))
-        }
-        catch (e) {
+        } catch (e) {
             val = defaultVal;
         }
         return val
