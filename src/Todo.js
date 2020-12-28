@@ -11,7 +11,7 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import { DispatchContext } from "./context/todosContext";
 
 const Todo = ({ id, task, completed }) => {
-    const { dispatch } = useContext(DispatchContext);
+    const dispatch = useContext(DispatchContext);
     const [ isEditing, toggle ] = useToggle(false);
     return (
         <ListItem style={{ height: "64px" }}>

@@ -4,7 +4,7 @@ import TextField from "@material-ui/core/TextField";
 import { DispatchContext } from "./context/todosContext";
 
 const EditTodoForm = ({ id, task, toggleEditForm }) => {
-    const { dispatch } = useContext(DispatchContext);
+    const dispatch = useContext(DispatchContext);
     const [ value, handleChange, reset ] = useInputState(task);
     return (
         <form 
