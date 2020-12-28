@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from "react";
 import todoReducer from "../reducers/todoReducer";
-import useTodoState from "../hooks/useTodoState";
 
 const defaultTodos = [
     { id: 1, task: "Clean Fishtank", completed: false },
